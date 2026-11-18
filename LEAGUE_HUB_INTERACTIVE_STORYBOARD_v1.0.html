@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
+<!-- v1.2 — 19 Nov 2026: layout phone (Safari iPhone) — grid 1 kolom, jadual boleh scroll melintang, bar kawalan wrap, teks pokok kecil -->
 <!-- v1.1 — 19 Nov 2026: semua ayat ditulis semula dalam Bahasa Malaysia mudah dibaca; istilah IT (MVP, slug, entity, idempotent, audit log, backfill, hardcode, fuzz-test, Blaze) dibuang atau dijelaskan -->
 <title>League Hub — Cara Sistem Ini Berjalan (OFL)</title>
 <style>
@@ -204,6 +205,30 @@
     .frame{padding:22px 18px;}
     h1{font-size:1.6rem;}
   }
+  @media (max-width:640px){
+    body{padding-bottom:132px;}
+    .deck{padding:12px 10px 4px;}
+    .frame{padding:18px 14px;border-radius:12px;}
+    h1{font-size:1.4rem;} h2{font-size:1.14rem;} h3{font-size:.92rem;}
+    p.lead{font-size:.96rem;}
+    .cover .sub,.cta .q{font-size:.95rem;}
+    .grid2,.grid3,.grid4{grid-template-columns:1fr;}
+    .kpis{grid-template-columns:1fr 1fr;}
+    .tree{font-size:.66rem;line-height:1.6;padding:12px 13px;}
+    .note{font-size:.85rem;padding:10px 12px;}
+    ul.check li,ul.cross li{font-size:.86rem;}
+    .card .t{font-size:.9rem;}
+    .chip.demo{position:static;display:inline-block;margin:0 0 8px;}
+    .bars div{font-size:.6rem;}
+    .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .tw>table.mini,.tw>table{min-width:660px;}
+    .tw>table.mini td,.tw>table.mini th{white-space:normal;}
+    #bar{flex-wrap:wrap;gap:6px;padding:8px 10px;}
+    #bar .lbl{display:none;}
+    #bar button{padding:6px 9px;font-size:.74rem;}
+    #bar .ctr{min-width:0;}
+    #toc .g{grid-template-columns:1fr;}
+  }
   @media print{
     @page{size:A4;margin:10mm;}
     *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
@@ -233,7 +258,7 @@
       <span class="chip conf">Untuk perbincangan OFL Management</span>
       <span class="chip demo" style="position:static;">19 paparan · 5 peringkat · semua nombor dalam gambar ini contoh</span>
     </div>
-    <div class="meta">Disediakan 18 November 2026 · Dikemas kini 19 November 2026 · Versi dokumen 1.1 · Ini dokumen cadangan, bukan aplikasi siap</div>
+    <div class="meta">Disediakan 18 November 2026 · Dikemas kini 19 November 2026 · Versi dokumen 1.2 · Ini dokumen cadangan, bukan aplikasi siap</div>
   </section>
 
   <!-- 01 -->
@@ -1133,7 +1158,7 @@ LEAGUE HUB<br>
 </div>
 
 <div class="foot">
-  Storyboard 1.1 · Dikemas kini 19 November 2026 · Berdasarkan dokumen pelan League Hub OFL v1.0 (dokumen internal)
+  Storyboard 1.2 · Dikemas kini 19 November 2026 · Berdasarkan dokumen pelan League Hub OFL v1.0 (dokumen internal)
   &nbsp;·&nbsp; <span id="openToc" style="cursor:pointer;text-decoration:underline;">Buka senarai slide</span>
 </div>
 
@@ -1233,6 +1258,17 @@ LEAGUE HUB<br>
 
   window.addEventListener("hashchange", function () { show(fromHash(), false); });
 
+  function wrapTables() {
+    Array.prototype.forEach.call(document.querySelectorAll("table.mini, .doc table"), function (t) {
+      if (t.parentNode.className === "tw") return;
+      var w = document.createElement("div");
+      w.className = "tw";
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    });
+  }
+
+  wrapTables();
   buildToc();
   mode("slide");
   show(fromHash(), false);
