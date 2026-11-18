@@ -246,14 +246,14 @@
       <div class="card pain"><div class="t">WhatsApp / borang</div><div class="muted">Skor masuk dari padang lewat &amp; dalam format berbeza-beza; perlu disalin.</div></div>
       <div class="card pain"><div class="t">Tiada halaman awam</div><div class="muted">Team, ibu bapa &amp; sponsor tanya results/kedudukan pada admin, bukan baca sendiri.</div></div>
     </div>
-    <div class="note warn"><b>Kos sebenar:</b> setiap kali maklumat disalin, setiap kali itu juga ada peluang ralat — dan ralat pada jadual kedudukan adalah ralat yang paling nampak di mata team &amp; sponsor.</div>
+    <div class="note warn"><b>Kos sebenar:</b> setiap kali maklumat disalin, setiap kali itu juga ada peluang ralat — dan ralat pada jadual kedudukan adalah ralat yang paling nampak pada pandangan team &amp; sponsor.</div>
   </section>
 
   <!-- 02 -->
   <section class="frame" data-num="02" data-title="Konsep satu ayat">
     <div class="kicker">The Concept</div>
     <h2>Satu ayat</h2>
-    <p class="lead">Admin rekod <b class="hl">satu perlawanan</b>. Sistem reuse rekod itu untuk standings, statistik pemain, statistik penjaga gol, laporan dokumen, dan halaman awam — tanpa menaip semula.</p>
+    <p class="lead">Admin rekod <b class="hl">satu perlawanan</b>. Sistem guna semula rekod itu untuk standings, statistik pemain, statistik penjaga gol, laporan dokumen, dan halaman awam — tanpa menaip semula.</p>
     <div class="flow" style="margin-top:16px;">
       <div class="step"><div class="n">1</div><div class="h">Setup competition</div><div class="d">League, season, category, rules.</div></div>
       <div class="arrow">→</div>
@@ -274,7 +274,7 @@
       <div class="arrow">→</div>
       <div class="step"><div class="n">9</div><div class="h">Publish</div><div class="d">Halaman awam liga.</div></div>
     </div>
-    <div class="note"><b>Kawalan:</b> langkah 6 (verification) ialah palang keselamatan. Skor sementara atau tersilap taip tidak masuk ke jadual rasmi sehingga seorang admin yang berhak mengesahkannya.</div>
+    <div class="note"><b>Kawalan:</b> langkah 6 (verification) ialah palang keselamatan. Skor sementara atau tersilap taip tidak masuk ke jadual rasmi sehingga seorang admin yang diberi kuasa mengesahkannya.</div>
   </section>
 
   <!-- 03 -->
@@ -302,14 +302,14 @@
         </div>
       </div>
       <div>
-        <h3>Apa ini berubah untuk OFL</h3>
+        <h3>Apa yang berubah untuk OFL</h3>
         <ul class="check">
           <li>Fail Word &amp; Excel jadi <b>output</b>, bukan sumber data.</li>
-          <li>Result betulkan → standings, statistik &amp; halaman awam update sendiri.</li>
+          <li>Result dibetulkan → standings, statistik &amp; halaman awam update sendiri.</li>
           <li>Rekalkulasi <b>idempotent</b> — perlawanan yang diproses semula tidak dikira dua kali.</li>
           <li>Setiap perubahan penting ada audit trail: siapa, bila, nilai lama → nilai baru.</li>
         </ul>
-        <div class="note dec"><b>Yang tidak berubah:</b> format dokumen lineup OFL yang team dah biasa terima. Sistem kumpul data secara digital, lalu cetak dalam layout yang sama.</div>
+        <div class="note dec"><b>Yang tidak berubah:</b> format dokumen lineup OFL yang team dah biasa terima. Sistem kumpul data secara digital, lalu mencetaknya dalam layout yang sama.</div>
       </div>
     </div>
   </section>
@@ -335,12 +335,12 @@
       <div>
         <h3>Sudah berfungsi hari ini</h3>
         <ul class="check">
-          <li>Multi-league dalam satu site — tambah liga tidak perlu tulis code.</li>
+          <li>Multi-league dalam satu site — menambah liga tidak perlu menulis code.</li>
           <li>Skor ditaip dari phone di padang → publik update serta-merta.</li>
           <li><b>League setup</b> dalam browser: senarai team → <b>jadual round-robin auto-jana</b>, atau upload CSV fixtures sedia ada.</li>
           <li>Engine standings fuzz-tested terhadap formula Excel (500 season rawak, 2,760 baris team — semua sama).</li>
         </ul>
-        <div class="note"><b>Maknanya untuk pelaburan ini:</b> kita tidak mula dari kosong. Fasa berikut menambah lapisan data, bukan membina semula asas.</div>
+        <div class="note"><b>Maknanya untuk pelaburan ini:</b> kita tidak bermula dari kosong. Fasa berikut menambah lapisan data, bukan membina semula asas.</div>
       </div>
     </div>
     <div class="small" style="margin-top:10px;">Semua nombor dalam mock adalah CONTOH, bukan result sebenar OFL.</div>
@@ -376,12 +376,12 @@ LEAGUE HUB<br>
       <div>
         <h3>Prinsip navigasi</h3>
         <ul class="check">
-          <li>Konteks <b>Organization → League → Season → Category</b> sentiasa kelihatan; admin tidak pilih berulang kali.</li>
+          <li>Konteks <b>Organization → League → Season → Category</b> sentiasa kelihatan; admin tidak perlu memilih berulang kali.</li>
           <li>Kad tugas di dashboard terus membuka rekod yang perlu diberi perhatian (contoh: 4 lineup belum diisi).</li>
           <li>Menu menunjukkan hanya action yang dibenarkan untuk role user tersebut.</li>
-          <li>Halaman awam dipisahkan sepenuhnya dari skrin admin.</li>
+          <li>Halaman awam dipisahkan sepenuhnya daripada skrin admin.</li>
         </ul>
-        <div class="note dec"><b>Keputusan terbuka:</b> sama ada OFL mahu satu Organization (OFL) dengan banyak league, atau setiap liga menjadi Organization berasingan. Ini mempengaruhi bagaimana hak akses diagihkan.</div>
+        <div class="note dec"><b>Keputusan terbuka:</b> sama ada OFL mahu satu Organization (OFL) dengan banyak league, atau setiap liga menjadi Organization berasingan. Ini memengaruhi cara hak akses diagihkan.</div>
       </div>
     </div>
   </section>
@@ -396,7 +396,7 @@ LEAGUE HUB<br>
         <tr><th style="width:22%">Skrin</th><th style="width:46%">Apa admin buat</th><th style="width:16%">Outcome</th><th>Status</th></tr>
         <tr><td>01 Sign in</td><td>Login email &amp; password</td><td>Akses terjamin</td><td><span class="badge f5">FASA 5</span></td></tr>
         <tr><td>02 Workspace</td><td>Pilih organization</td><td>Konteks betul</td><td><span class="badge f1">FASA 1</span></td></tr>
-        <tr><td>03 Dashboard</td><td>Lihat workload &amp; task queue</td><td>Tahu apa perlu buat</td><td><span class="badge f2">FASA 2</span></td></tr>
+        <tr><td>03 Dashboard</td><td>Lihat workload &amp; task queue</td><td>Apa yang perlu dibuat</td><td><span class="badge f2">FASA 2</span></td></tr>
         <tr><td>04 Create league</td><td>Nama, slug, logo, visibility</td><td>League wujud</td><td><span class="badge had">DAH ADA</span></td></tr>
         <tr><td>05 Season &amp; rules</td><td>Format, mata, tie-breaker</td><td>Rules siap</td><td><span class="badge part">SEPARUH</span></td></tr>
         <tr><td>06 Categories</td><td>U8–U16 + peraturan per kategori</td><td>Struktur siap</td><td><span class="badge part">SEPARUH</span></td></tr>
@@ -439,10 +439,10 @@ LEAGUE HUB<br>
         <h3>Sistem respon</h3>
         <ul class="check">
           <li>Kenal pasti user, muat organization membership &amp; role.</li>
-          <li>Routing ikut role — League Manager buka league yang dia diberi tugas.</li>
-          <li>Kelayan: loading · kredential salah · akses belum diberi · reset password.</li>
+          <li>Routing ikut role — League Manager membuka league yang diberikan kepadanya.</li>
+          <li>Keadaan: loading · kredential salah · akses belum diberi · reset password.</li>
         </ul>
-        <div class="note dec"><b>Keputusan:</b> untuk pilot, akses boleh dikawal dulu dengan code admin bersama (cara yang dipakai hari ini). Login rasmi per-admin + rules Firestore datang di Fasa 5 — sebelum data pemain muda dibuka secara meluas.</div>
+        <div class="note dec"><b>Keputusan:</b> untuk pilot, akses boleh dikawal dulu dengan code admin bersama (cara yang dipakai hari ini). Login rasmi per-admin + rules Firestore menyusul pada Fasa 5 — sebelum data pemain muda dibuka secara meluas.</div>
       </div>
     </div>
   </section>
@@ -506,7 +506,7 @@ LEAGUE HUB<br>
           <tr><td>URL slug unik per league</td><td>Query string</td><td><span class="badge f4">F4</span></td></tr>
           <tr><td>Season sebagai entity tersendiri</td><td>Field sahaja</td><td><span class="badge f1">F1</span></td></tr>
         </table>
-        <div class="note dec"><b>Slug</b> perlu unik; sistem reserve dan tolak duplikat. Kalau OFL suka format pendek (<code>andalas-2026</code>) vs panjang (SEO mesra), putuskan di Fasa 0.</div>
+        <div class="note dec"><b>Slug</b> perlu unik; sistem reserve dan tolak duplikat. Jika OFL lebih suka format pendek (<code>andalas-2026</code>) vs panjang (SEO mesra), putuskan pada Fasa 0.</div>
       </div>
     </div>
   </section>
@@ -534,13 +534,13 @@ LEAGUE HUB<br>
       </div>
       <div>
         <h3>Peraturan disimpan, bukan di-hardcode</h3>
-        <p class="muted" style="font-size:.9rem;">Setiap league, musim dan kategori boleh berbeza format. Sistem ambil nilai dari konfigurasi — U12 satu liga tidak tentukan U10 liga lain.</p>
+        <p class="muted" style="font-size:.9rem;">Setiap league, musim dan kategori boleh berbeza format. Sistem mengambil nilai daripada konfigurasi — format U12 dalam satu liga tidak menentukan format U10 dalam liga lain.</p>
         <ul class="check">
-          <li>Mata menang/seri/kalah boleh diubah tanpa sentuh code.</li>
-          <li>Turut simpan: walkover, forfeit, match abandonment (bentuk masih perlu diputuskan).</li>
-          <li>Format lain (group → knockout, split season) direkod sebagai konfigurasi untuk fasa hadapan.</li>
+          <li>Mata menang/seri/kalah boleh diubah tanpa mengubah code.</li>
+          <li>Boleh dirakam juga: walkover, forfeit, perlawanan ditinggalkan (bentuknya masih perlu diputuskan).</li>
+          <li>Format lain (group → knockout, split season) direkod sebagai konfigurasi untuk fasa akan datang.</li>
         </ul>
-        <div class="note warn"><b>Beda dengan hari ini:</b> engine sedia ada sudah pakai 3/1/0 dan Pts → GD → GF. <b>Head-to-head belum dibuat</b> — ia item baru yang perlu disahkan OFL sebelum dibina.</div>
+        <div class="note warn"><b>Beza dengan hari ini:</b> engine sedia ada sudah pakai 3/1/0 dan Pts → GD → GF. <b>Head-to-head belum dibuat</b> — ia item baru yang perlu disahkan OFL sebelum dibina.</div>
       </div>
     </div>
   </section>
@@ -561,7 +561,7 @@ LEAGUE HUB<br>
           <tr><td class="pos">U14</td><td>Div 1</td><td class="num">8</td><td class="num">11</td><td class="num">6</td><td class="num">2×25'</td><td>Active</td><td><span class="btn ghost">Edit</span></td></tr>
           <tr><td class="pos">U16</td><td>Div 1</td><td class="num">6</td><td class="num">11</td><td class="num">7</td><td class="num">2×30'</td><td>Active</td><td><span class="btn ghost">Edit</span></td></tr>
         </table>
-        <div class="row" style="margin-top:9px;"><span class="btn">+ Add category</span><span class="small">Nombor di atas adalah placeholder sehingga OFL sahkan format setiap umur.</span></div>
+        <div class="row" style="margin-top:9px;"><span class="btn">+ Add category</span><span class="small">Nombor di atas adalah placeholder sehingga OFL mengesahkan format setiap umur.</span></div>
       </div>
     </div>
     <div class="note dec"><b>Keputusan paling kritikal untuk lineup &amp; statistik.</b> Tidak boleh diandaikan semua umur main format sama: starters, sub limit, duration, dan minimum playing time adalah input kepada validasi lineup, kiraan appearance, dan clean-sheet penjaga gol.</div>
@@ -590,7 +590,7 @@ LEAGUE HUB<br>
         <p class="muted" style="font-size:.9rem;">Hari ini nama team disimpan sebagai teks dalam setiap liga. <code>TFC Akademi</code>, <code>TFC AKADEMI</code> dan <code>TFC Academy</code> dianggap tiga team berbeza — dan logo perlu dipasang semula setiap kali.</p>
         <ul class="check">
           <li>Satu club identity, dipakai di semua league &amp; musim.</li>
-          <li>Logo, short name dan sejarah penyertaan cukup sekali entry.</li>
+          <li>Logo, short name dan sejarah penyertaan cukup sekali sahaja.</li>
           <li>Memory/Excel kelab tidak perlu disalin semula bila buka musim baru.</li>
         </ul>
         <div class="note dec"><b>Akses:</b> direktori boleh dibaca semua organization, tapi editing identiti shared perlu dihadkan (platform admin atau owner club) supaya satu organizer tidak memadam logo organizer lain.</div>
@@ -623,11 +623,11 @@ LEAGUE HUB<br>
       </div>
       <div>
         <h3>Club ≠ Entry</h3>
-        <p class="muted" style="font-size:.9rem;">Ini perbezaan yang buat sistem boleh scale. <b>Club</b> = identiti global yang kekal. <b>Entry</b> = penyertaan club itu ke satu musim &amp; kategori tertentu.</p>
+        <p class="muted" style="font-size:.9rem;">Inilah yang membolehkan sistem berkembang. <b>Club</b> = identiti global yang kekal. <b>Entry</b> = penyertaan club itu ke satu musim &amp; kategori tertentu.</p>
         <ul class="check">
           <li>Satu club boleh hantar 3 squad: U10 Div 1, U12 Div 1, U14 Div 1.</li>
           <li>Nama paparan berbeza ikut competition (contoh <i>SA City 1</i>) tanpa mencipta club baru.</li>
-          <li>Fixture, lineup dan statistik melekat pada entry — jadi historis setiap musim kekal betul.</li>
+          <li>Fixture, lineup dan statistik melekat pada entry — jadi rekod setiap musim kekal betul.</li>
         </ul>
         <div class="note"><b>Fungsi yang OFL akan rasa serta-merta:</b> bila senarai penyertaan masuk sekali, pendaftaran musim berikutnya tinggal tick — bukan taip semula.</div>
       </div>
@@ -662,8 +662,8 @@ LEAGUE HUB<br>
       </div>
     </div>
     <div class="grid2" style="margin-top:12px;">
-      <div class="note"><b>Privasi pemain muda.</b> DOB, contact dan nota dalaman tidak muncul di halaman awam, dan tidak muncul dalam laporan yang tidak diluluskan. Sistem kutip minimum data yang perlu untuk operasi competition.</div>
-      <div class="note dec"><b>Keputusan diperlukan:</b> tarikh cut-off umur, cara sepadan pemain duplicate (nama sama, IC berbeza), rules transfer/registration-lock, dan sama ada gambar pemain perlu pada MVP.</div>
+      <div class="note"><b>Privasi pemain muda.</b> DOB, contact dan nota dalaman tidak muncul pada halaman awam, dan tidak muncul pada laporan yang tidak diluluskan. Sistem hanya mengumpul data minimum yang diperlukan untuk operasi pertandingan.</div>
+      <div class="note dec"><b>Keputusan diperlukan:</b> tarikh cut-off umur, cara mengesan pemain berganda (nama sama, IC berbeza), rules transfer/registration-lock, dan sama ada gambar pemain perlu pada MVP.</div>
     </div>
   </section>
 
@@ -689,9 +689,9 @@ LEAGUE HUB<br>
         <h3>Validasi sistem</h3>
         <ul class="check">
           <li>Home &amp; away mesti entry dalam kategori yang sama.</li>
-          <li>Team tidak boleh jumpa dirinya sendiri.</li>
+          <li>Team tidak boleh menentang dirinya sendiri.</li>
           <li>Tidak ada team main dua perlawanan dalam slot yang sama (sudah terbukti dalam generator sedia ada).</li>
-          <li>Balance home/away &amp; edaran slot dikira, bukan diteka.</li>
+          <li>Balance home/away &amp; edaran slot dikira, bukan diandaikan.</li>
         </ul>
       </div>
       <div>
@@ -742,14 +742,14 @@ LEAGUE HUB<br>
         <h3>Validasi automatik</h3>
         <ul class="check">
           <li>Bilangan starter ikut peraturan kategori.</li>
-          <li>Sub limit tidak lampau; tiada pemain dua kali dalam lineup sama.</li>
+          <li>Sub limit tidak melebihi had; tiada pemain dua kali dalam lineup sama.</li>
           <li>Pemain mesti registration yang <b>approved</b> untuk entry itu.</li>
           <li>Seorang pemain tidak boleh main untuk dua team dalam perlawanan sama.</li>
           <li>GK &amp; captain wajib lengkap bila kategori mensyaratkannya.</li>
         </ul>
       </div>
       <div class="note warn">
-        <b>Ini work yang hari ini ambil paling banyak masa.</b> Satu lineup = borang Word penuh; salah satu nama, satu perlawanan boleh dibatalkan team lawan.<br><br>
+        <b>Ini kerja yang paling banyak memakan masa hari ini.</b> Satu lineup = borang Word penuh; salah satu nama, satu perlawanan boleh dibatalkan team lawan.<br><br>
         Snapshot lineup disimpan sebagai rekod sejarah — kalau roster berubah kemudian, dokumen perlawanan lama tidak berubah.
       </div>
     </div>
@@ -782,7 +782,7 @@ LEAGUE HUB<br>
           <div class="t">Goal event form</div>
           <div class="row" style="margin-top:5px;"><span class="field">Team ▾</span><span class="field">Scorer ▾</span><span class="field">Minute 48</span><span class="field">+2 added</span><span class="field">Assist ▾</span></div>
         </div>
-        <h3>Rules kiraan yang ditekan di sini</h3>
+        <h3>Peraturan kiraan yang dikuatkuasakan di sini</h3>
         <ul class="check">
           <li>Own goal dikira untuk pihak lawan <b>tidak</b> masuk leaderboard scorer.</li>
           <li>Penalty masuk = goal; penalty missed = bukan goal.</li>
@@ -824,7 +824,7 @@ LEAGUE HUB<br>
         </ul>
         <h3>Kalau result salah &amp; perlu dibetulkan</h3>
         <div class="card" style="margin-top:4px;">
-          <div class="small">Perlawanan 2–1 → <b>3–1 (amended)</b> · sebab: salah rekod gol 63'. Nilai lama disimpan, nilai baru direkod, pengurang &amp; sebab tercatat, <b>semua derived data dikira semula dari awal</b>.</div>
+          <div class="small">Perlawanan 2–1 → <b>3–1 (amended)</b> · sebab: salah rekod gol 63'. Nilai lama disimpan, nilai baru direkod, siapa yang mengubah &amp; sebab tercatat, <b>semua derived data dikira semula dari awal</b>.</div>
         </div>
         <div class="note"><b>Kenapa ini selamat:</b> rekalkulasi bermula dari rekod perlawanan, bukan tolak-tambah pada kiraan lama. Proses yang sama dijalankan dua kali tetap menghasilkan nombor yang sama — double-counting tidak boleh berlaku secara struktur.</div>
       </div>
@@ -908,7 +908,7 @@ LEAGUE HUB<br>
     </div>
     <div class="grid2" style="margin-top:12px;">
       <div class="note"><b>Arkib tanpa Storage.</b> Laporan sentiasa boleh dijana semula dari data — jadi "recent reports" ialah senarai permintaan + siapa generate, bukan timbunan fail. Tiada risiko versi lama PDF tersalah edar.</div>
-      <div class="note warn"><b>Had yang perlu OFL tahu:</b> fail masuk ke folder download admin, bukan pautan kekal untuk club. Kalau nanti perlu <i>klik pautan → terus muat turun</i> untuk setiap team, itu memerlukan plan berbayar (Storage + Cloud Functions) — kita cadangkan putuskan selepas pilot.</div>
+      <div class="note warn"><b>Had yang perlu OFL tahu:</b> fail masuk ke folder download admin, bukan pautan kekal untuk club. Kalau nanti perlu <i>klik pautan → terus muat turun</i> untuk setiap team, itu memerlukan plan berbayar (Storage + Cloud Functions) — kami cadangkan keputusan itu dibuat selepas pilot.</div>
     </div>
   </section>
 
@@ -946,13 +946,13 @@ LEAGUE HUB<br>
         </ul>
       </div>
     </div>
-    <div class="note"><b>Ini yang jual diri sendiri.</b> Team, ibu bapa dan sponsor berhenti menanya admin — mereka buka satu URL. Setiap perlawanan yang diverifikasi muncul dalam beberapa saat, dengan standings yang sama yang admin pakai.</div>
+    <div class="note"><b>Ini bahagian yang mempromosikan dirinya sendiri.</b> Team, ibu bapa dan sponsor berhenti menanya admin — mereka buka satu URL. Setiap perlawanan yang diverifikasi muncul dalam beberapa saat, dengan standings yang sama yang admin pakai.</div>
   </section>
 
   <!-- 22 -->
   <section class="frame" data-num="22" data-title="Coverage vs MVP">
     <div class="kicker">Honest Status</div>
-    <h2>Di mana kita berbanding MVP blueprint</h2>
+    <h2>Sejauh mana kita berbanding MVP blueprint</h2>
     <p class="lead">19 kriteria penerimaan MVP (§16 blueprint).</p>
     <div class="bars">
       <div class="b-had" style="width:21%;">4 siap</div>
@@ -975,7 +975,7 @@ LEAGUE HUB<br>
       <table class="mini">
         <tr><th style="width:26%">Aspek</th><th style="width:37%">Hari ini (Word + Excel)</th><th>Dengan League Hub</th></tr>
         <tr><td>Data perlawanan</td><td>Skor masuk Excel; lineup masuk Word; dua-dua berasingan</td><td>Satu rekod perlawanan; lineup &amp; event ada di dalamnya</td></tr>
-        <tr><td>Standings</td><td>Dikira/kemas manual, versi berbeza berbeza orang</td><td>Auto dari result diverifikasi; satu versi untuk semua</td></tr>
+        <tr><td>Standings</td><td>Dikira &amp; dikemas secara manual, versinya berbeza mengikut orang</td><td>Auto dari result diverifikasi; satu versi untuk semua</td></tr>
         <tr><td>Statistik pemain / GK</td><td>Manual atau tidak dibuat</td><td>Auto: gol, assist, kad, appearance, clean sheet, conceded</td></tr>
         <tr><td>Dokumen matchday</td><td>Word disalin-tampal setiap perlawanan</td><td>Template dijana dari data, layout OFL dikekalkan</td></tr>
         <tr><td>Maklumat kepada team</td><td>WhatsApp blast / screenshot</td><td>URL awam, update realtime</td></tr>
@@ -986,7 +986,7 @@ LEAGUE HUB<br>
     </div>
     <div class="grid3" style="margin-top:14px;">
       <div class="card win"><div class="t">Masa admin</div><div class="small">Sasar: satu perlawanan dari lineup ke result siap <b>tanpa menaip data yang sama dua kali</b>.</div></div>
-      <div class="card win"><div class="t">Keyakinan nombor</div><div class="small">Standings yang team bantah = standings yang salah taip. Verification gate + audit trail hapuskan sumber ini.</div></div>
+      <div class="card win"><div class="t">Keyakinan nombor</div><div class="small">Standings yang dibantah team = standings yang salah taip. Verification gate + audit trail hapuskan sumber ini.</div></div>
       <div class="card win"><div class="t">Nilai kepada sponsor</div><div class="small">Halaman liga yang profesional, top scorer &amp; clean sheet boleh dipaparkan — bahan promosi yang tak perlu dikarang.</div></div>
     </div>
   </section>
@@ -1018,10 +1018,10 @@ LEAGUE HUB<br>
       </div>
       <div style="display:flex;gap:14px;padding:11px 0;">
         <div style="flex-shrink:0;width:88px;font-weight:800;color:var(--gold);">FASA 5</div>
-        <div><div style="font-weight:800;color:var(--pitch);">Auth, roles &amp; access <span class="badge f5">bila fitur stabil</span></div><div class="small">Hasil: login per-admin, permission ditegaskan di server, rules Firestore, environment dev/prod. Perlu sebelum banyak organization masuk.</div></div>
+        <div><div style="font-weight:800;color:var(--pitch);">Auth, roles &amp; access <span class="badge f5">bila fitur stabil</span></div><div class="small">Hasil: login per-admin, permission ditegaskan pada pelayan, rules Firestore, environment dev/prod. Perlu sebelum banyak organization masuk.</div></div>
       </div>
     </div>
-    <div class="note warn"><b>Anggaran ini jujur:</b> ia berdasarkan sistem yang sudah berjalan dan dianggap kerja separuh masa, dengan Fasa 0 selesai. Ia berubah bila peraturan kategori (§18) dan format laporan difikirkan matang — sebab itu Fasa 0 dahulu, bukan code dahulu.</div>
+    <div class="note warn"><b>Anggaran ini jujur:</b> ia berdasarkan sistem yang sudah berjalan dan dianggap kerja separuh masa, dengan Fasa 0 selesai. Ia berubah apabila peraturan kategori (§18) dan format laporan dimuktamadkan — sebab itu Fasa 0 dahulu, bukan code dahulu.</div>
   </section>
 
   <!-- 25 -->
@@ -1043,7 +1043,7 @@ LEAGUE HUB<br>
       </div>
       <div>
         <h3>Kos yang sebenarnya</h3>
-        <div class="card"><div class="t">Masa &amp; usaha pembinaan</div><div class="small">Bukan langganan bulanan. Infra sengaja dipilih supaya tiada bill berjalan apabila project berhenti.</div></div>
+        <div class="card"><div class="t">Masa &amp; usaha pembinaan</div><div class="small">Bukan langganan bulanan. Infra sengaja dipilih supaya tiada bil berjalan apabila project berhenti.</div></div>
         <div class="card" style="margin-top:8px;"><div class="t">Masa admin OFL</div><div class="small">Fasa 0: jawab peraturan. Pilot: masukkan roster + main 2–3 gameweek paralel Excel.</div></div>
         <div class="card" style="margin-top:8px;"><div class="t">Satu item teknikal perlu dibuat</div><div class="small">Firestore hari ini masih <b>test mode</b> — ada tarikh kunci pada <b>17 Dis 2026</b>. Bukan kos, tapi perlu ditukar sebelum site digunakan untuk musim penuh.</div></div>
       </div>
@@ -1053,32 +1053,32 @@ LEAGUE HUB<br>
   <!-- 26 -->
   <section class="frame" data-num="26" data-title="Risiko &amp; mitigation">
     <div class="kicker">Risk Register</div>
-    <h2>Risiko yang kami nampak — dan cara kita handle</h2>
+    <h2>Risiko yang kami nampak — dan cara kami mengendalikannya</h2>
     <table class="mini" style="margin-top:10px;">
       <tr><th style="width:24%">Risiko</th><th style="width:10%">Tahap</th><th style="width:34%">Kenapa</th><th>Mitigation</th></tr>
-      <tr><td>Beban data awal</td><td><span class="badge build">Tinggi</span></td><td>Roster &amp; historis beberapa liga perlu masuk</td><td>Import CSV/Excel dalam browser (sebahagian sudah ada); historis boleh di-backfill per musim, semua sekaligus tak perlu</td></tr>
-      <tr><td>Double entry semasa pilot</td><td><span class="badge part">Sederhana</span></td><td>Excel masih jalan paralel</td><td>Memang disengajakan — untuk compare. Tandakan tarikh berhenti Excel apabila 3 gameweek berturut-turut sama</td></tr>
-      <tr><td>Adoption oleh admin</td><td><span class="badge part">Sederhana</span></td><td>Lineup perlu diisi lengkap, lebih detail daripada Excel</td><td>Format OFL dikekalkan; satu orang sahaja isi; semua orang baca. Template &amp; default ikut kategori</td></tr>
+      <tr><td>Beban data awal</td><td><span class="badge build">Tinggi</span></td><td>Roster &amp; rekod lampau beberapa liga perlu masuk</td><td>Import CSV/Excel dalam browser (sebahagian sudah ada); rekod lampau boleh di-backfill mengikut musim, tidak perlu buat semuanya sekaligus</td></tr>
+      <tr><td>Double entry semasa pilot</td><td><span class="badge part">Sederhana</span></td><td>Excel masih jalan paralel</td><td>Memang disengajakan — untuk tujuan perbandingan. Tandakan tarikh berhenti Excel apabila 3 gameweek berturut-turut sama</td></tr>
+      <tr><td>Adoption oleh admin</td><td><span class="badge part">Sederhana</span></td><td>Lineup perlu diisi lengkap, lebih detail daripada Excel</td><td>Format OFL dikekalkan; satu orang sahaja mengisi; semua orang membaca. Template &amp; default ikut kategori</td></tr>
       <tr><td>Peraturan belum muktamad</td><td><span class="badge build">Tinggi</span></td><td>Clean sheet, appearance, walkover, starters</td><td>Dijadikan konfigurasi, bukan hardcode; Fasa 0 kena jawab sebelum Fasa 2</td></tr>
       <tr><td>Privasi pemain muda</td><td><span class="badge part">Sederhana</span></td><td>DOB &amp; contact tersimpan</td><td>Public exclusion sudah ditetapkan; Access control di Fasa 5; kutip minimum data</td></tr>
       <tr><td>Kehilangan data</td><td><span class="badge part">Sederhana</span></td><td>Satu database dipakai semua admin</td><td>Export Excel berkala + audit log + sebelum perubahan besar, snapshot taken</td></tr>
     </table>
-    <div class="note"><b>Yang paling penting:</b> sistem ini direka supaya <b>Excel &amp; Word tidak perlu dibuang serta-merta</b>. Pilot paralel beri OFL bukti nombor sama sebelum satu pun workflow lama dihentikan.</div>
+    <div class="note"><b>Yang paling penting:</b> sistem ini direka supaya <b>Excel &amp; Word tidak perlu ditinggalkan serta-merta</b>. Pilot paralel beri OFL bukti nombor sama sebelum satu pun workflow lama dihentikan.</div>
   </section>
 
   <!-- 27 -->
   <section class="frame" data-num="27" data-title="Pilot">
     <div class="kicker">Pilot Strategy</div>
-    <h2>Mula kecil, buktikan, baru meluas</h2>
+    <h2>Mula kecil, buktikan, kemudian meluas</h2>
     <div class="grid2">
       <div>
         <p class="lead">Satu liga. <b class="hl">Satu kategori umur.</b> Tiga gameweek. Excel &amp; Word terus jalan sebagai pembanding.</p>
         <div class="flow vert" style="margin-top:12px;">
           <div class="step have"><div class="h">1 · Setup</div><div class="d">League + Season + U12 + rules (30 minit).</div></div>
-          <div class="step have"><div class="h">2 · Daftar</div><div class="d">Club &amp; entry dari senarai penyertaan sedia ada; pemain import dari Excel.</div></div>
-          <div class="step"><div class="h">3 · Fixtures</div><div class="d">Import CSV jadual yang OFL sudah ada (sokongan sudah hidup).</div></div>
+          <div class="step have"><div class="h">2 · Daftar</div><div class="d">Club &amp; entry dari senarai penyertaan sedia ada; pemain diimport dari Excel.</div></div>
+          <div class="step"><div class="h">3 · Fixtures</div><div class="d">Import CSV jadual yang OFL sudah ada (sokongan itu sudah pun ada).</div></div>
           <div class="step"><div class="h">4 · Lineup + Match</div><div class="d">Isi lineup, rekod event semasa perlawanan.</div></div>
-          <div class="step"><div class="h">5 · Verify &amp; banding</div><div class="d">Standings &amp; statistik sistem vs Excel manual. Beza = kita semaki, bukan kita tukar Excel.</div></div>
+          <div class="step"><div class="h">5 · Verify &amp; banding</div><div class="d">Standings &amp; statistik sistem vs Excel manual. Jika berbeza, kami semak semula — bukan menukar Excel.</div></div>
           <div class="step"><div class="h">6 · Laporan &amp; publish</div><div class="d">Cetak lineup sheet, edar result, buka halaman awam.</div></div>
         </div>
       </div>
@@ -1086,14 +1086,14 @@ LEAGUE HUB<br>
         <h3>Kriteria pilot dianggap berjaya</h3>
         <ul class="check">
           <li>Tiada maklumat perlawanan ditaip dua kali.</li>
-          <li>Export lineup cukup dekat dengan format OFL untuk dipakai sebenar.</li>
+          <li>Export lineup cukup hampir dengan format OFL untuk digunakan secara rasmi.</li>
           <li>Result diverifikasi menghasilkan standings betul (sama dengan Excel).</li>
           <li>Statistik pemain &amp; GK ikut rules yang dipersetujui.</li>
           <li>Amendment result tidak double-count.</li>
-          <li>Admin boleh siapkan workflow tanpa Excel sebagai sistem utama.</li>
-          <li>Halaman awam hanya dedahkan maklumat diluluskan.</li>
+          <li>Admin boleh menyelesaikan workflow tanpa Excel sebagai sistem utama.</li>
+          <li>Halaman awam hanya mendedahkan maklumat yang diluluskan.</li>
         </ul>
-        <div class="note"><b>Cadangan liga pilot:</b> satu kategori OFL yang pusingannya kecil tetapi aktif — cukup data untuk buktikan lineup &amp; event, cukup kecil untuk backout kalau gagal.</div>
+        <div class="note"><b>Cadangan liga pilot:</b> satu kategori OFL yang pusingannya kecil tetapi aktif — cukup data untuk buktikan lineup &amp; event, cukup kecil untuk kami berundur jika gagal.</div>
       </div>
     </div>
   </section>
@@ -1109,10 +1109,10 @@ LEAGUE HUB<br>
       <tr><td>Tie-breaker</td><td>Pts → GD → GF → H2H</td><td>Head-to-head belum dibina; kena sahkan dulu</td></tr>
       <tr><td>Dasar clean sheet GK</td><td>Perlu dipilih 1</td><td>Ranking penjaga gol &amp; goals conceded</td></tr>
       <tr><td>Walkover / forfeit / abandoned</td><td>Result type khusus</td><td>Standings &amp; rekonsiliasi skor</td></tr>
-      <tr><td>Verification: siapa &amp; berapa orang</td><td>Admin berhak; maker–checker?</td><td>Integriti result rasmi</td></tr>
+      <tr><td>Verification: siapa &amp; berapa orang</td><td>Admin yang diberi kuasa; maker–checker?</td><td>Integriti result rasmi</td></tr>
       <tr><td>Model Organization</td><td>Satu OFL, banyak league</td><td>Struktur akses &amp; cara league baru dibuka</td></tr>
       <tr><td>Hosting &amp; domain</td><td>Firebase Hosting + subdomain free dulu</td><td>URL yang OFL edar ke team &amp; sponsor</td></tr>
-      <tr><td>Data rujukan</td><td>Roster, jadual &amp; senarai penyertaan sedia ada (Excel/CSV)</td><td>Masukkan Fasa 1; menentukan kelajuan pilot</td></tr>
+      <tr><td>Data rujukan</td><td>Roster, jadual &amp; senarai penyertaan sedia ada (Excel/CSV)</td><td>Memasuki Fasa 1; menentukan kelajuan pilot</td></tr>
       <tr><td>Template lineup rasmi OFL</td><td><b>ON HOLD</b> — fail akan dihantar</td><td>Layout export DOCX/PDF</td></tr>
     </table>
   </section>
@@ -1123,7 +1123,7 @@ LEAGUE HUB<br>
     <h2>Apa yang kami minta hari ini</h2>
     <div class="q"><b>1 · Setuju direction.</b> Satu sumber kebenaran per perlawanan; dokumen jadi output; Excel dipakai sebagai pembanding semasa pilot, bukan sistem utama.</div>
     <div class="q"><b>2 · Lulus Fasa 0 + Fasa 1.</b> Mesyuarat peraturan (±1 minggu) kemudian bina direktori club &amp; pemain. Ini asas yang semua fasa lain bergantung kepadanya.</div>
-    <div class="q"><b>3 · Tandai satu liga &amp; satu kategori untuk pilot</b>, dan seorang admin sebagai penanggungjawab data.</div>
+    <div class="q"><b>3 · Pilih satu liga &amp; satu kategori untuk pilot</b>, dan seorang admin sebagai penanggungjawab data.</div>
     <div class="q"><b>4 · Sediakan bahan:</b> roster pemain + senarai penyertaan + jadual fixtures sedia ada (Excel/CSV), dan template lineup OFL apabila bersedia.</div>
     <div class="sub" style="color:#d7f0e4;margin-top:14px;font-size:1rem;"><b>League Hub — One Platform. Every League. One Source of Truth.</b></div>
     <div class="meta" style="margin-top:12px;color:#bfe0d0;font-size:.8rem;">Dokumen konsep — belum ada code baru ditulis. Paparan skrin adalah reka bentuk cadangan; data adalah contoh.</div>
