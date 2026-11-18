@@ -4,6 +4,7 @@ league standing system
 ## Product storyboard (for OFL management)
 
 `LEAGUE_HUB_INTERACTIVE_STORYBOARD_v1.0.html` — interactive concept deck, 30 slides.
+Version 1.1 is written in plain Bahasa Malaysia for non-technical readers (no software jargon).
 
 - Open it directly (download the file and open in any browser) — works offline, no login.
 - Or enable Pages: Settings → Pages → Deploy from a branch → `main` / root, then
